@@ -5,11 +5,11 @@
 class Dbt < Formula
   desc "dbt Labs' CLI."
   homepage "https://github.com/dbt-labs/homebrew-dbt-cli"
-  version "0.31.2"
+  version "0.32.0"
 
   on_macos do
-    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.31.2/dbt_0.31.2_darwin_all.tar.gz"
-    sha256 "78ccfad3aa6692dd95ec59a329ca34178e321526805cd05603c7b4e090a7f09f"
+    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.32.0/dbt_0.32.0_darwin_all.tar.gz"
+    sha256 "f946aa17ecdadfd6996b39068e50b9f9e418667a4907acda971d1b74d9ca6b6f"
 
     def install
       bin.install "dbt"
@@ -17,25 +17,25 @@ class Dbt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.31.2/dbt_0.31.2_linux_armv6.tar.gz"
-      sha256 "d730f6baafe4ea9be1fe6629c3092fe5aa713cad3f692d2ad0c75af23c9ada4f"
+    if Hardware::CPU.intel?
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.32.0/dbt_0.32.0_linux_amd64.tar.gz"
+      sha256 "d99405e49e7e7cdee4f8caaa5079912b660c9a1c6bd59da8ba146d51d6b8d691"
 
       def install
         bin.install "dbt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.31.2/dbt_0.31.2_linux_arm64.tar.gz"
-      sha256 "619f2cae19eadb2962a224f25f05c3ed7ef1c9fd0ba54d138c9374a766d7df3d"
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.32.0/dbt_0.32.0_linux_arm64.tar.gz"
+      sha256 "b5de9d7159309374a91749a747b56318df0ce38a1b39ab14c4ef9aa9c682a5aa"
 
       def install
         bin.install "dbt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.31.2/dbt_0.31.2_linux_amd64.tar.gz"
-      sha256 "b2ad98e74c3989495994db3468045cb780fb52f7553ba26147a2112956e837b8"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.32.0/dbt_0.32.0_linux_armv6.tar.gz"
+      sha256 "f55f8ccfcf2a5e8754343044abd98268c92a2cdfb1a25199e50713fb77cf7a37"
 
       def install
         bin.install "dbt"
