@@ -12,5 +12,5 @@ brew tap dbt-labs/dbt-cli
 To install the the `dbt` command from the tap, run
 
 ```
-brew install dbt-cloud-cli
+brew install dbt
 ```
