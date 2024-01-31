@@ -5,11 +5,11 @@
 class Dbt < Formula
   desc "dbt Labs' CLI."
   homepage "https://github.com/dbt-labs/homebrew-dbt-cli"
-  version "0.35.16"
+  version "0.35.17"
 
   on_macos do
-    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.16/dbt_0.35.16_darwin_all.tar.gz"
-    sha256 "e5cc62e4d1995cd760b686b17ce3c2b4027f9896f37b820b2746e2eb7ad4a656"
+    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.17/dbt_0.35.17_darwin_all.tar.gz"
+    sha256 "b71b9131eb94ab6f357882d169c47e794ff52736ef36f69af456bec840bd05c6"
 
     def install
       bin.install "dbt"
@@ -18,24 +18,24 @@ class Dbt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.16/dbt_0.35.16_linux_amd64.tar.gz"
-      sha256 "4811b85ef26a9706d464b46a08c7c63db701bcbeef840360e76867550b80417a"
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.17/dbt_0.35.17_linux_amd64.tar.gz"
+      sha256 "262568dd5e512feac97f6d75e7fcbb85a0b8fec5729f6e594f1a99db8f37ae6b"
 
       def install
         bin.install "dbt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.16/dbt_0.35.16_linux_arm64.tar.gz"
-      sha256 "62da4036f976be319363f74b47e2c0a48a9cf651ebfab2a584594a6305917cb2"
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.17/dbt_0.35.17_linux_arm64.tar.gz"
+      sha256 "3689548bc48d2525e414187a4377d95a8e9c0dc9d7b1bb15e59ec716e622af19"
 
       def install
         bin.install "dbt"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.16/dbt_0.35.16_linux_armv6.tar.gz"
-      sha256 "7cedff15200bacc437717b034820d5691cd8c2f119089446e2e74cbe675bca92"
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.17/dbt_0.35.17_linux_armv6.tar.gz"
+      sha256 "7ffefa0ccf48b6b5de9715b95eb1dfdb5ed5e58928841b3887346c03ff3de076"
 
       def install
         bin.install "dbt"
