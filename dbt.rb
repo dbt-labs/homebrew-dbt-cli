@@ -5,11 +5,11 @@
 class Dbt < Formula
   desc "dbt Labs' CLI."
   homepage "https://github.com/dbt-labs/homebrew-dbt-cli"
-  version "0.35.21"
+  version "0.35.22"
 
   on_macos do
-    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.21/dbt_0.35.21_darwin_all.tar.gz"
-    sha256 "05ed0c2ccc16fee8cc68bef1962eb8b0fa82a0c96d54a0bd2662164e3aa8120f"
+    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.22/dbt_0.35.22_darwin_all.tar.gz"
+    sha256 "fb2f4452974499249809ba711e06548830ee81983049bc49924181ba9efe7009"
 
     def install
       bin.install "dbt"
@@ -17,25 +17,25 @@ class Dbt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.21/dbt_0.35.21_linux_arm64.tar.gz"
-      sha256 "ac93672d571db9ed4abcc6de5c03f03a3c7ce0da82e06f23cffe3dd94198ab10"
+    if Hardware::CPU.intel?
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.22/dbt_0.35.22_linux_amd64.tar.gz"
+      sha256 "e9eede8ed0a221d455b59f4f202708879001a7a0bf948c8708b5bfbed6511c4e"
 
       def install
         bin.install "dbt"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.21/dbt_0.35.21_linux_amd64.tar.gz"
-      sha256 "422b96b36c0c45c4ceb254fe3c2646ecc5f3f0530842779bc871b934974bdb04"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.22/dbt_0.35.22_linux_arm64.tar.gz"
+      sha256 "e697cfa884389fd01e9933bb42bc494f4a2c7cca8342279abfa5b38aa64368e2"
 
       def install
         bin.install "dbt"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.21/dbt_0.35.21_linux_armv6.tar.gz"
-      sha256 "52f4b22eaacc0aaeff8514d66a0a55933437048753fe3a29500f228328220a98"
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.35.22/dbt_0.35.22_linux_armv6.tar.gz"
+      sha256 "45de729c41734245658a1678302de798ea58193042165fcf3d6cdfc17f1af8c5"
 
       def install
         bin.install "dbt"
