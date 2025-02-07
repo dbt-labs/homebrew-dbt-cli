@@ -5,11 +5,11 @@
 class DbtcloudTerraforming < Formula
   desc "CLI tool to help importing existing dbt Cloud configuration to Terraform"
   homepage "https://github.com/dbt-labs/dbtcloud-terraforming"
-  version "0.9.0"
+  version "0.10.0"
 
   on_macos do
-    url "https://github.com/dbt-labs/dbtcloud-terraforming/releases/download/v0.9.0/dbtcloud-terraforming_0.9.0_darwin_all.tar.gz"
-    sha256 "89d4f243a3731f715f42cc635c7c2fca3c8d9b96ea2c9afb10812b1aef352afe"
+    url "https://github.com/dbt-labs/dbtcloud-terraforming/releases/download/v0.10.0/dbtcloud-terraforming_0.10.0_darwin_all.tar.gz"
+    sha256 "dc35c117f153be5c3bc2fdfeed24df60855cae76c2b2788a4ee178f87602e06b"
 
     def install
       bin.install "dbtcloud-terraforming"
@@ -19,8 +19,8 @@ class DbtcloudTerraforming < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dbt-labs/dbtcloud-terraforming/releases/download/v0.9.0/dbtcloud-terraforming_0.9.0_linux_amd64.tar.gz"
-        sha256 "7c3707f325dca03e595d69b371ee0fc23741ff21ffa2ce1704a7b92c73975ced"
+        url "https://github.com/dbt-labs/dbtcloud-terraforming/releases/download/v0.10.0/dbtcloud-terraforming_0.10.0_linux_amd64.tar.gz"
+        sha256 "4c6671c9fb7c53bd989956cbd516500db50cad62fe35cb73e9f770437f742ca1"
 
         def install
           bin.install "dbtcloud-terraforming"
@@ -29,8 +29,8 @@ class DbtcloudTerraforming < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/dbt-labs/dbtcloud-terraforming/releases/download/v0.9.0/dbtcloud-terraforming_0.9.0_linux_armv6.tar.gz"
-        sha256 "10a07f7cba95c03a66c8cccdcdfd9a1594c3a6bd9fc6d2142e27e1ebb6fb6626"
+        url "https://github.com/dbt-labs/dbtcloud-terraforming/releases/download/v0.10.0/dbtcloud-terraforming_0.10.0_linux_armv6.tar.gz"
+        sha256 "cbb5c8c623b3d281a6a3138573b2fbac7be178873854903b9e0de317bf297b54"
 
         def install
           bin.install "dbtcloud-terraforming"
@@ -39,8 +39,8 @@ class DbtcloudTerraforming < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dbt-labs/dbtcloud-terraforming/releases/download/v0.9.0/dbtcloud-terraforming_0.9.0_linux_arm64.tar.gz"
-        sha256 "894ddb04636a154228ecfed9f53764af4466646f6e28467adb64cb9da80f43af"
+        url "https://github.com/dbt-labs/dbtcloud-terraforming/releases/download/v0.10.0/dbtcloud-terraforming_0.10.0_linux_arm64.tar.gz"
+        sha256 "61c6fb4e9feaa5c34fac2bbc6ca63ee681af2151bb480a40a9e7f3d3f4ee4a0e"
 
         def install
           bin.install "dbtcloud-terraforming"
