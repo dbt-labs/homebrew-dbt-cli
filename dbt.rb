@@ -5,11 +5,11 @@
 class Dbt < Formula
   desc "dbt Labs' CLI."
   homepage "https://github.com/dbt-labs/homebrew-dbt-cli"
-  version "0.38.28"
+  version "0.38.29"
 
   on_macos do
-    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.38.28/dbt_0.38.28_darwin_all.tar.gz"
-    sha256 "dfa1ceed5a63d26a417bad126a37c0476c187ffcfec52176159044dfab754eff"
+    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.38.29/dbt_0.38.29_darwin_all.tar.gz"
+    sha256 "848d6029c0ff3cb317aaabbb5b971cba4709fdcae85dc5fbb1f56297d6c7566d"
 
     def install
       bin.install "dbt"
@@ -19,8 +19,8 @@ class Dbt < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.38.28/dbt_0.38.28_linux_amd64.tar.gz"
-        sha256 "cbb5c23b5217146abc8d8aff6f855ef0a1a36b83ae45d1f1c4b29d5464d313c7"
+        url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.38.29/dbt_0.38.29_linux_amd64.tar.gz"
+        sha256 "fd1a7a3e3c9f5d9043e738559e27ef83353c46c5d4b84cc635a92cf0931085de"
 
         def install
           bin.install "dbt"
@@ -29,8 +29,8 @@ class Dbt < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.38.28/dbt_0.38.28_linux_armv6.tar.gz"
-        sha256 "f50571bfd3ead4a9a3e24c53d39deec2f43522f5cf9af41d2d15c9de8fc4dede"
+        url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.38.29/dbt_0.38.29_linux_armv6.tar.gz"
+        sha256 "59e5d79fcfc710b3863e2b58e642736f2a50d7962c72322b2b0a61671190f2b2"
 
         def install
           bin.install "dbt"
@@ -39,8 +39,8 @@ class Dbt < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.38.28/dbt_0.38.28_linux_arm64.tar.gz"
-        sha256 "f38ded28023e209cf99a78ff3464c3471a28189f97044aafda6372d548aefa67"
+        url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.38.29/dbt_0.38.29_linux_arm64.tar.gz"
+        sha256 "d614a2fd704ae0ccee4672b11d29bb519ec061ac1b9c4fa9dd779bd15a2f314f"
 
         def install
           bin.install "dbt"
