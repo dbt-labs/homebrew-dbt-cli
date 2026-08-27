@@ -5,11 +5,11 @@
 class Dbt < Formula
   desc "dbt Labs' CLI."
   homepage "https://github.com/dbt-labs/homebrew-dbt-cli"
-  version "0.40.18"
+  version "0.40.19"
 
   on_macos do
-    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.40.18/dbt_0.40.18_darwin_all.tar.gz"
-    sha256 "91f3c57b52508cb0dffa9143c79834e78f36de1a5793a0f5b1279ac6f44cc77e"
+    url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.40.19/dbt_0.40.19_darwin_all.tar.gz"
+    sha256 "e0944d35688e312b1d146b575c8cdd220fbe340a43e2c099fd7c93d74bc9609b"
 
     define_method(:install) do
       bin.install "dbt"
@@ -18,22 +18,22 @@ class Dbt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.40.18/dbt_0.40.18_linux_amd64.tar.gz"
-      sha256 "41343ac2e52c8265cc8a8c021e2fca92521d40eb77f81da8e0689449f16d9763"
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.40.19/dbt_0.40.19_linux_amd64.tar.gz"
+      sha256 "c2a5e098789e75e3d68cb12a8be48f3e9c2e3cd6aad7a735564e9281a9a8b6df"
       define_method(:install) do
         bin.install "dbt"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.40.18/dbt_0.40.18_linux_armv6.tar.gz"
-      sha256 "0c689aa2502f8ecb7bd1374564f78cf9cdb0f746b5b2a9615d22fa6d5e04aa1a"
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.40.19/dbt_0.40.19_linux_armv6.tar.gz"
+      sha256 "d3d8ae23ffcdeb4d587b1ee4266d80011fc4d04d8876345dbc6132ddd4f06e8b"
       define_method(:install) do
         bin.install "dbt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.40.18/dbt_0.40.18_linux_arm64.tar.gz"
-      sha256 "e161e225344097cf0d4944721c423e9afb041ac249724ce84471d471e8fababa"
+      url "https://github.com/dbt-labs/dbt-cli/releases/download/v0.40.19/dbt_0.40.19_linux_arm64.tar.gz"
+      sha256 "4d861262586b6d095242d694ca91faba67b8a3e44c0fcabbf1072361f867ec14"
       define_method(:install) do
         bin.install "dbt"
       end
